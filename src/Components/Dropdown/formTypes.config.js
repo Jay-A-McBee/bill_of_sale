@@ -1,3 +1,8 @@
+import BullForm from '../Forms/components/bullForm';
+
+
+const formComponents = [BullForm];
+
 const types = [
   'Bulls', 'Cows', 'Cow & Calf Pairs', 'Bred Heifers', 'Open Replacement Heifers',
   'Yearling Feeder Cattle', 'Stocker Calves', 'Other Classes of Cattle', 'Show Cattle', 'Cattle Wanted',
@@ -11,5 +16,6 @@ const anchorRefs = [
 
 export const formTypes = types.map( (title, idx) => ({
   title,
-  url:anchorRefs[idx]
+  url:anchorRefs[idx],
+  component:formComponents[idx]
 }))

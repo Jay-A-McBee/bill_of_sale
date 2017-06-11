@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, Text, ScrollView, Dimensions } from 'react-native';
-import { DropdownTile } from './dropdownTile';
+import { DropdownTile, RouteComponent } from './dropdownTile';
 import { formTypes } from './formTypes.config';
 import { FixedWidthContainer, InnerContent, Row } from '../Layout';
 import styled from 'styled-components';
@@ -50,7 +50,7 @@ export class DropdownMenu extends Component{
               alignItems='center'
             >
               <ScrollView>
-                {formTypes.map( props => (<DropdownTile {...props} />))}
+                {formTypes.map( (props, idx) => (<DropdownTile key={idx} {...props} />))}
               </ScrollView>
             </InnerContent>
           )}
